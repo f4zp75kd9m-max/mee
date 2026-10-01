@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Максатова Зухра — Кәсіби веб-парақшам</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+
+    :root {
+      --primary-color: #486980;
+      --primary-hover: #3f7680;
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 40px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white;
+      padding: 40px 20px 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 0 20px;
+    }
+
+    section {
+      background: var(--card-bg);
+      padding: 32px;
+      margin-bottom: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--bg-color);
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin: 20px 0 10px;
+      color: #334155;
+    }
+    figure {
+      float: right;
+      margin: 0 0 15px 20px;
+      text-align: center;
+    }
+    figure img {
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: 3px solid var(--primary-color);
+    }
+    figcaption {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+    .video-container {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #000;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    #resurstar a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    #resurstar a:hover {
+      text-decoration: underline;
+    }
+    time {
+      display: inline-block;
+      background: #e0e7ff;
+      color: var(--primary-color);
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      margin-right: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      overflow: hidden;
+      border-radius: 8px;
+      border: none;
+    }
+
+    caption {
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--text-muted);
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: #334155;
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background-color: #f8fafc;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #334155;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+
+    fieldset {
+      border: 1px solid var(--border-color);
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    legend {
+      padding: 0 8px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 10px 0;
+    }
+
+    .checkbox-group input {
+      width: auto;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    button[type="submit"] {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    button[type="submit"]:hover {
+      background-color: var(--primary-hover);
+    }
+
+    button[type="reset"] {
+      background-color: #e2e8f0;
+      color: #475569;
+    }
+
+    button[type="reset"]:hover {
+      background-color: #cbd5e1;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      figure {
+        float: none;
+        margin: 0 0 20px 0;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      section {
+        padding: 20px;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      
+      th {
+        display: none;
+      }
+      
+      tr {
+        margin-bottom: 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 8px;
+      }
+      
+      td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px dashed var(--border-color);
+      }
+
+      td:last-child {
+        border-bottom: none;
+      }
+      
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Максатова Зухра</h1>
+    <p>Информатика мамандығының 3-курс студентімін. Frontend бағытында дамып келемін.</p>
+    <nav>
+      <ul>
+        <li><a href="#basty-bet">Басты бет</a></li>
+        <li><a href="#men-turaly">Мен туралы</a></li>
+        <li><a href="#dagdylar">Менің дағдыларым</a></li>
+        <li><a href="#jobalar">Жобаларым</a></li>
+        <li><a href="#jetistikter">Жетістіктерім</a></li>
+        <li><a href="#multimedia">Бейне</a></li>
+        <li><a href="#resurstar">Пайдалы ресурстар</a></li>
+        <li><a href="#baylanys">Байланыс</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="basty-bet">
+      <h2>Басты бет</h2>
+      <p>Қош келдіңіз! Бұл — менің жеке кәсіби веб-парақшам.</p>
+    </section>
+  
+    <section id="men-turaly">
+      <h2>Мен туралы</h2>
+      <figure>
+        <img src="images.jpg" alt="Максатова Зухра портреттік суреті" style="width: 130px; height: 130px;">
+        <figcaption>Максатова Зухра — IT студенті</figcaption>
+      </figure>
+      <p>
+        Мені <strong>Максатова Зухра</strong> деп атайды. 
+        Мамандығым — «Цифрлық аналитикалық», қазіргі уақытта 
+        Қазақ Ұлттық Қыздар Педагогикалық университетінің 3-курс студентімін.
+      </p>
+      <br>
+      <p>
+        Бос уақытымда бағдарламалауды және жаңа технологияларды үйренуді ұнатамын.
+        Кәсіби мақсатым — пайдаланушыға ыңғайлы веб-қосымшалар жасайтын 
+        frontend-инженер болу.
+      </p>
+    </section>
+  
+    <section id="dagdylar">
+      <h2>Менің дағдыларым</h2>
+
+      <h3>Бағдарламалау тілдері мен технологиялар</h3>
+      <ul>
+        <li>Бағдарламалау тілдері:
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+          </ul>
+        </li>
+        <li>Web-технологиялар:
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </li>
+      </ul>
+  
+      <h3>Дағдылар деңгейі бойынша</h3>
+      <ol>
+        <li>HTML/CSS — орта деңгей</li>
+        <li>JavaScript — орта деңгей</li>
+        <li>Python — орта деңгей</li>
+        <li>Java — бастапқы деңгей</li>
+        <li>SQL — орта деңгей</li>
+        <li>Ағылшын тілі — B1 деңгей</li>
+        <li>Командада жұмыс істей білу</li>
+      </ol>
+    </section>
+  
+    <section id="jobalar">
+      <h2>Менің жобаларым</h2>
+    
+      <table>
+        <caption>Оқу және өзіндік жобаларымның тізімі</caption>
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Жоба атауы</th>
+            <th>Қолданылған технологиялар</th>
+            <th>Жылы</th>
+            <th>Жоба жағдайы</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="№">1</td>
+            <td data-label="Жоба атауы">Менің кәсіби веб-парақшам</td>
+            <td data-label="Технологиялар">HTML5, CSS3</td>
+            <td data-label="Жылы">2026</td>
+            <td data-label="Жағдайы">Дамуда</td>
+          </tr>
+          <tr>
+            <td data-label="№">2</td>
+            <td data-label="Жоба атауы">Инновациялық технологиялар және жоғары білім берудің цифрлық трансформациясы</td>
+            <td data-label="Технологиялар">HTML5, Python, R-studio</td>
+            <td data-label="Жылы">2025</td>
+            <td data-label="Жағдайы">Аяқталды</td>
+          </tr>
+          <tr>
+            <td data-label="№">3</td>
+            <td data-label="Жоба атауы">Жасанды интеллект жүйелері</td>
+            <td data-label="Технологиялар">Matlab</td>
+            <td data-label="Жылы">2025</td>
+            <td data-label="Жағдайы">Аяқталды</td>
+          </tr>
+          <tr>
+            <td data-label="№">4</td>
+            <td data-label="Жоба атауы">To-Do List қосымшасы</td>
+            <td data-label="Технологиялар">JavaScript</td>
+            <td data-label="Жылы">2025</td>
+            <td data-label="Жағдайы">Аяқталды</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  
+    <section id="jetistikter">
+      <h2>Менің жетістіктерім</h2>
+      <ul>
+        <li><time datetime="2026-05-15">15 мамыр 2026</time> Хакатон байқауында 3-орын жеңімпазы атандым.</li>
+        <li><time datetime="2026-05-25">25 мамыр 2026</time> AI-SANA. National Program сертификатын алдым.</li>
+        <li><time datetime="2022-04-20">20 сәуір 2022</time> Республикалық информатика олимпиадасына қатыстым.</li>
+        <li><time datetime="2025-09-10">10 қыркүйек 2025</time> Университет журналында ғылыми мақала жарияладым.</li>
+        <li><time datetime="2024-03-05">5 наурыз 2024</time> «IT Marathon» жобалар байқауында үздік жоба үшін диплом алдым.</li>
+      </ul>
+    </section>
+  
+    <section id="multimedia">
+      <h2>Бейне таныстырылым</h2>
+      <div class="video-container">
+        <video controls>
+          <source src="video.mov" type="video/mp4">
+          Сіздің браузеріңіз видео тегін қолдамайды.
+        </video>
+      </div>
+    </section>
+
+    <section id="resurstar">
+      <h2>Пайдалы ресурстар</h2>
+      <ul>
+        <li><a href="https://new.qyzpu.edu.kz/ru" target="_blank">Қазақ Ұлттық Қыздар Педагогикалық Университеті</a></li>
+        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        <li><a href="https://developer.mozilla.org/kk/" target="_blank">MDN Web Docs (HTML құжаттамасы)</a></li>
+        <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a></li>
+        <li><a href="https://www.coursera.org" target="_blank">Coursera</a></li>
+      </ul>
+    </section>
+
+    <section id="baylanys">
+      <h2>Байланыс</h2>
+    
+      <form action="#" method="post">
+        <div>
+          <label for="fullname">Аты-жөні:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Аты-жөніңізді енгізіңіз">
+        </div>
+
+        <div>
+          <label for="email">Электрондық пошта:</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com">
+        </div>
+
+        <div>
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+7 (700) 000-00-00">
+        </div>
+
+        <div>
+          <label for="subject">Тақырып:</label>
+          <select id="subject" name="subject">
+            <option value="question">Сұрақ</option>
+            <option value="feedback">Пікір</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Байланысудың қолайлы тәсілі:</legend>
+          <label><input type="radio" id="method-email" name="method" value="email" checked> Email</label> &nbsp;
+          <label><input type="radio" id="method-phone" name="method" value="phone"> Телефон</label>
+        </fieldset>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="agree" name="agree">
+          <label for="agree">Дербес деректерімді өңдеуге келісемін</label>
+        </div>
+
+        <div>
+          <label for="message">Хабарлама:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Хабарламаңызды осында жазыңыз..."></textarea>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit">Жіберу</button>
+          <button type="reset">Тазалау</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Максатова Зухра. Барлық құқықтар қорғалған.</p>
+  </footer>
+
+</body>
+</html> <!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Максатова Зухра — Кәсіби веб-парақшам</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+
+    :root {
+      --primary-color: #486980;
+      --primary-hover: #3f7680;
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 40px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white;
+      padding: 40px 20px 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 0 20px;
+    }
+
+    section {
+      background: var(--card-bg);
+      padding: 32px;
+      margin-bottom: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--bg-color);
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin: 20px 0 10px;
+      color: #334155;
+    }
+    figure {
+      float: right;
+      margin: 0 0 15px 20px;
+      text-align: center;
+    }
+    figure img {
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: 3px solid var(--primary-color);
+    }
+    figcaption {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+    .video-container {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #000;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    #resurstar a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    #resurstar a:hover {
+      text-decoration: underline;
+    }
+    time {
+      display: inline-block;
+      background: #e0e7ff;
+      color: var(--primary-color);
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      margin-right: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      overflow: hidden;
+      border-radius: 8px;
+      border: none;
+    }
+
+    caption {
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--text-muted);
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: #334155;
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background-color: #f8fafc;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #334155;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+
+    fieldset {
+      border: 1px solid var(--border-color);
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    legend {
+      padding: 0 8px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 10px 0;
+    }
+
+    .checkbox-group input {
+      width: auto;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    button[type="submit"] {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    button[type="submit"]:hover {
+      background-color: var(--primary-hover);
+    }
+
+    button[type="reset"] {
+      background-color: #e2e8f0;
+      color: #475569;
+    }
+
+    button[type="reset"]:hover {
+      background-color: #cbd5e1;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      figure {
+        float: none;
+        margin: 0 0 20px 0;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      section {
+        padding: 20px;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      
+      th {
+        display: none;
+      }
+      
+      tr {
+        margin-bottom: 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 8px;
+      }
+      
+      td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px dashed var(--border-color);
+      }
+
+      td:last-child {
+        border-bottom: none;
+      }
+      
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Максатова Зухра</h1>
+    <p>Информатика мамандығының 3-курс студентімін. Frontend бағытында дамып келемін.</p>
+    <nav>
+      <ul>
+        <li><a href="#basty-bet">Басты бет</a></li>
+        <li><a href="#men-turaly">Мен туралы</a></li>
+        <li><a href="#dagdylar">Менің дағдыларым</a></li>
+        <li><a href="#jobalar">Жобаларым</a></li>
+        <li><a href="#jetistikter">Жетістіктерім</a></li>
+        <li><a href="#multimedia">Бейне</a></li>
+        <li><a href="#resurstar">Пайдалы ресурстар</a></li>
+        <li><a href="#baylanys">Байланыс</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="basty-bet">
+      <h2>Басты бет</h2>
+      <p>Қош келдіңіз! Бұл — менің жеке кәсіби веб-парақшам.</p>
+    </section>
+  
+    <section id="men-turaly">
+      <h2>Мен туралы</h2>
+      <figure>
+        <img src="images.jpg" alt="Максатова Зухра портреттік суреті" style="width: 130px; height: 130px;">
+        <figcaption>Максатова Зухра — IT студенті</figcaption>
+      </figure>
+      <p>
+        Мені <strong>Максатова Зухра</strong> деп атайды. 
+        Мамандығым — «Цифрлық аналитикалық», қазіргі уақытта 
+        Қазақ Ұлттық Қыздар Педагогикалық университетінің 3-курс студентімін.
+      </p>
+      <br>
+      <p>
+        Бос уақытымда бағдарламалауды және жаңа технологияларды үйренуді ұнатамын.
+        Кәсіби мақсатым — пайдаланушыға ыңғайлы веб-қосымшалар жасайтын 
+        frontend-инженер болу.
+      </p>
+    </section>
+  
+    <section id="dagdylar">
+      <h2>Менің дағдыларым</h2>
+
+      <h3>Бағдарламалау тілдері мен технологиялар</h3>
+      <ul>
+        <li>Бағдарламалау тілдері:
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+          </ul>
+        </li>
+        <li>Web-технологиялар:
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </li>
+      </ul>
+  
+      <h3>Дағдылар деңгейі бойынша</h3>
+      <ol>
+        <li>HTML/CSS — орта деңгей</li>
+        <li>JavaScript — орта деңгей</li>
+        <li>Python — орта деңгей</li>
+        <li>Java — бастапқы деңгей</li>
+        <li>SQL — орта деңгей</li>
+        <li>Ағылшын тілі — B1 деңгей</li>
+        <li>Командада жұмыс істей білу</li>
+      </ol>
+    </section>
+  
+    <section id="jobalar">
+      <h2>Менің жобаларым</h2>
+    
+      <table>
+        <caption>Оқу және өзіндік жобаларымның тізімі</caption>
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Жоба атауы</th>
+            <th>Қолданылған технологиялар</th>
+            <th>Жылы</th>
+            <th>Жоба жағдайы</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="№">1</td>
+            <td data-label="Жоба атауы">Менің кәсіби веб-парақшам</td>
+            <td data-label="Технологиялар">HTML5, CSS3</td>
+            <td data-label="Жылы">2026</td>
+            <td data-label="Жағдайы">Дамуда</td>
+          </tr>
+          <tr>
+            <td data-label="№">2</td>
+            <td data-label="Жоба атауы">Инновациялық технологиялар және жоғары білім берудің цифрлық трансформациясы</td>
+            <td data-label="Технологиялар">HTML5, Python, R-studio</td>
+            <td data-label="Жылы">2025</td>
+            <td data-label="Жағдайы">Аяқталды</td>
+          </tr>
+          <tr>
+            <td data-label="№">3</td>
+            <td data-label="Жоба атауы">Жасанды интеллект жүйелері</td>
+            <td data-label="Технологиялар">Matlab</td>
+            <td data-label="Жылы">2025</td>
+            <td data-label="Жағдайы">Аяқталды</td>
+          </tr>
+          <tr>
+            <td data-label="№">4</td>
+            <td data-label="Жоба атауы">To-Do List қосымшасы</td>
+            <td data-label="Технологиялар">JavaScript</td>
+            <td data-label="Жылы">2025</td>
+            <td data-label="Жағдайы">Аяқталды</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  
+    <section id="jetistikter">
+      <h2>Менің жетістіктерім</h2>
+      <ul>
+        <li><time datetime="2026-05-15">15 мамыр 2026</time> Хакатон байқауында 3-орын жеңімпазы атандым.</li>
+        <li><time datetime="2026-05-25">25 мамыр 2026</time> AI-SANA. National Program сертификатын алдым.</li>
+        <li><time datetime="2022-04-20">20 сәуір 2022</time> Республикалық информатика олимпиадасына қатыстым.</li>
+        <li><time datetime="2025-09-10">10 қыркүйек 2025</time> Университет журналында ғылыми мақала жарияладым.</li>
+        <li><time datetime="2024-03-05">5 наурыз 2024</time> «IT Marathon» жобалар байқауында үздік жоба үшін диплом алдым.</li>
+      </ul>
+    </section>
+  
+    <section id="multimedia">
+      <h2>Бейне таныстырылым</h2>
+      <div class="video-container">
+        <video controls>
+          <source src="video.mov" type="video/mp4">
+          Сіздің браузеріңіз видео тегін қолдамайды.
+        </video>
+      </div>
+    </section>
+
+    <section id="resurstar">
+      <h2>Пайдалы ресурстар</h2>
+      <ul>
+        <li><a href="https://new.qyzpu.edu.kz/ru" target="_blank">Қазақ Ұлттық Қыздар Педагогикалық Университеті</a></li>
+        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        <li><a href="https://developer.mozilla.org/kk/" target="_blank">MDN Web Docs (HTML құжаттамасы)</a></li>
+        <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a></li>
+        <li><a href="https://www.coursera.org" target="_blank">Coursera</a></li>
+      </ul>
+    </section>
+
+    <section id="baylanys">
+      <h2>Байланыс</h2>
+    
+      <form action="#" method="post">
+        <div>
+          <label for="fullname">Аты-жөні:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Аты-жөніңізді енгізіңіз">
+        </div>
+
+        <div>
+          <label for="email">Электрондық пошта:</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com">
+        </div>
+
+        <div>
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+7 (700) 000-00-00">
+        </div>
+
+        <div>
+          <label for="subject">Тақырып:</label>
+          <select id="subject" name="subject">
+            <option value="question">Сұрақ</option>
+            <option value="feedback">Пікір</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Байланысудың қолайлы тәсілі:</legend>
+          <label><input type="radio" id="method-email" name="method" value="email" checked> Email</label> &nbsp;
+          <label><input type="radio" id="method-phone" name="method" value="phone"> Телефон</label>
+        </fieldset>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="agree" name="agree">
+          <label for="agree">Дербес деректерімді өңдеуге келісемін</label>
+        </div>
+
+        <div>
+          <label for="message">Хабарлама:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Хабарламаңызды осында жазыңыз..."></textarea>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit">Жіберу</button>
+          <button type="reset">Тазалау</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Максатова Зухра. Барлық құқықтар қорғалған.</p>
+  </footer>
+
+</body>
+</html>
